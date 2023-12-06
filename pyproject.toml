@@ -1,6 +1,6 @@
 [project]
 name = "sparc.client"
-version = "0.2.0"
+version = "0.2.1"
 description = "NIH SPARC Python Client"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -49,9 +49,9 @@ test = [
 
 [project.urls]
 homepage = "https://sparc.science"
-documentation = "https://github.com/nih-sparc/sparc.client/README.md"
+documentation = "https://github.com/nih-sparc/sparc.client/blob/main/README.md"
 repository = "https://github.com/nih-sparc/sparc.client"
-changelog = "https://github.com/nih-sparc/sparc.client/CHANGELOG.md"
+changelog = "https://github.com/nih-sparc/sparc.client/blob/main/CHANGELOG.md"
 
 
 [tool.black]
