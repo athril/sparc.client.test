@@ -8,7 +8,7 @@ on:
 jobs:
   tests:
     uses: actions/checkout@v3 # Necessary to access local action
-    uses: ./.github/CI.yml
+    uses: ./.github/workflows/CI.yml
 
   publish:
     name: publish
