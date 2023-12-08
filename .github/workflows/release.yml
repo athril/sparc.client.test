@@ -7,7 +7,9 @@ on:
 
 jobs:
   tests:
+    uses: actions/checkout@v3 # Necessary to access local action
     uses: ./.github/CI.yml
+
   publish:
     name: publish
     needs: [tests] # require tests to pass before deploy runs
