@@ -36,6 +36,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       with: 
         body_path: Release.txt
+        generate_release_notes: true
         token: ${{ secrets.GITHUB_TOKEN }}
         draft: false
         prerelease: false
