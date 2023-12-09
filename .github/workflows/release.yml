@@ -30,7 +30,7 @@ jobs:
 #        name: ${{github.ref_name}}
 #        path: Release
     - name: Build
-      run: echo ${{ github.sha }} > Release.txt
+      run: echo ${{github.event_name}} (${{ github.sha }}) > Release.txt
     - name: Test
       run: cat Release.txt
     - name: Release
