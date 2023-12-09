@@ -22,6 +22,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 #    - name: Create tag artifact
 #      uses: actions/upload-artifact@v2
 #      with:
@@ -32,7 +34,8 @@ jobs:
     - name: Test
       run: cat Release.txt
     - name: Release
-      uses: softprops/action-gh-release@v1
+#      uses: softprops/action-gh-release@v1
+      uses: pipe-cd/action-gh-release@v2.3.4
       if: startsWith(github.ref, 'refs/tags/')
       with: 
         body_path: Release.txt
