@@ -37,8 +37,10 @@ jobs:
       with: 
         body_path: Release.txt
         token: ${{ secrets.GITHUB_TOKEN }}
-          files: |
-            Release.txt
+        draft: false
+        prerelease: false
+        files: |
+          Release.txt
 
 
     #        body_path: ${{ github.workspace }}/CHANGELOG.md
