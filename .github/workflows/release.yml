@@ -4,15 +4,14 @@ on:
   push:
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+  pull_request:
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
 
 jobs:
-  tests:
-    uses: actions/checkout@v3 # Necessary to access local action
-    uses: ./.github/workflows/CI.yml
-
   publish:
     name: publish
-#    needs: [tests] # require tests to pass before deploy runs
     runs-on: ubuntu-latest
     permissions:
       contents: write
