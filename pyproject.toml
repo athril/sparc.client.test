@@ -79,8 +79,11 @@ where = ["src", "config"]
 "*" = ["*.ini", "*.txt"]
 
 [build-system]
-requires = ["setuptools", "pennsieve2", "cmlibs.zinc", "cmlibs.utils", "scaffoldmaker", "mbfxml2ex"]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2", "dynamic-versioning", "pennsieve2", "cmlibs.zinc", "cmlibs.utils", "scaffoldmaker", "mbfxml2ex"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+# Empty is fine
 
 [tool.pytest.ini_options]
 addopts = "-ra -q"
