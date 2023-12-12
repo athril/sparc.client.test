@@ -85,6 +85,10 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools_scm]
 # Empty is fine
 
+[project.entry-points."setuptools.finalize_distribution_options"]
+setuptools_scm = "setuptools_scm._integration.setuptools:infer_version"
+
+
 [tool.pytest.ini_options]
 addopts = "-ra -q"
 testpaths = [
