@@ -8,8 +8,7 @@ __all__: tuple[str, ...] = [
 
 
 #__version__ = importlib.metadata.version(__package__)
-
-#import pkg_resources
+# import pkg_resources
 # __version__ = pkg_resources.get_distribution("sparc.client").version
 
 
