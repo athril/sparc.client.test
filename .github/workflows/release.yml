@@ -17,32 +17,36 @@ jobs:
     permissions:
       contents: write
       discussions: write
-#      pull-requests: write
-#      repository-projects: write
     steps:
     - name: Checkout
       uses: actions/checkout@v3
       with:
         fetch-depth: 0
-#    - name: Create tag artifact
-#      uses: actions/upload-artifact@v2
-#      with:
-#        name: ${{github.ref_name}}
-#        path: Release
-    - name: Build
-      run: echo "${{github.event_name}} (${{ github.sha }})" > Release.txt
-    - name: Test
-      run: cat Release.txt
-    - name: Release
-      uses: softprops/action-gh-release@v1
-      with: 
-        body_path: Release.txt
-        generate_release_notes: true
-        token: ${{ secrets.GITHUB_TOKEN }}
-        draft: false
-        prerelease: false
-        files: |
-          Release.txt
+      - name: Build Changelog
+        id: github_release
+        uses: mikepenz/release-changelog-builder-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Release
+        uses: mikepenz/action-gh-release@v0.2.0-a03 #softprops/action-gh-release
+        with:
+          body: ${{steps.github_release.outputs.changelog}}
+
+
+#    - name: Build
+#      run: echo "${{github.event_name}} (${{ github.sha }})" > Release.txt
+#    - name: Test
+#      run: cat Release.txt
+#    - name: Release
+#      uses: softprops/action-gh-release@v1
+#      with: 
+#        body_path: Release.txt
+#        generate_release_notes: true
+#        token: ${{ secrets.GITHUB_TOKEN }}
+#        draft: false
+#        prerelease: false
+#        files: |
+#          Release.txt
 
 
     #        body_path: ${{ github.workspace }}/CHANGELOG.md
