@@ -107,7 +107,7 @@ This means that `CHANGELOG.md` as well as release commands are automatically gen
 The new pipeline is a follows:
 
 1. First, please make sure you are working with the most recent code base, as each release automatically updates CHANGELOG.md.
-`git fetch`
+`git pull`
 
 2. In order to create a new release, the software version needs to be tagged, with the version number beginning with letter `v`
 `git tag -s v1.3.7 -m "release comments"`
