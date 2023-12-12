@@ -49,9 +49,15 @@ Basic functionalities:
    * listing datasets, files, records
    * downloading files
    * Basic API support (GET/POST) 
+## [v0.0.45] - 2023-12-12
+### :bug: Bug Fixes
+- [`57a0581`](https://github.com/athril/sparc.client/commit/57a05811c9d395cc0da291c04e68fb27db12d0ee) - imports update *(commit by [@athril](https://github.com/athril))*
+
+
 ## [v0.0.42] - 2023-12-12
 ### :sparkles: New Features
 - [`3124672`](https://github.com/athril/sparc.client/commit/31246720c92a0acbeaaf648878d5c46e5747c99d) - improving release mechanism *(commit by [@athril](https://github.com/athril))*
 
 
 [v0.0.42]: https://github.com/athril/sparc.client/compare/v0.0.41...v0.0.42
+[v0.0.45]: https://github.com/athril/sparc.client/compare/v0.0.44...v0.0.45
