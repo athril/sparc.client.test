@@ -94,3 +94,20 @@ Run `pip install -e '.[test]'` to install the dependencies needed for a developm
 Run `pytest --cov=./src` to run the tests and get a test coverage summary.
 
 Run `pytest --cov-report html --cov=./src` to run the tests and get a full HTML coverage report output to `htmlcov`.
+
+The process is currently automated using Github Action in CI.yml.
+
+
+# Software releasing guidelines
+
+The process of releasing new version of the software is fully automated.
+
+This means that no version of the software is hard-coded in pyproject.toml, the versioning is fully dynamic.
+
+In order to create a new release, the software version needs to be tagged, with the version number beginning with letter `v`
+`git tag v1.3.7`
+
+Next, the specific version needs to be submitted to the codebase, e.g.
+`git push origin v1.3.7`
+
+This will create a tagged version 1.3.7, start the Release workflow, which would create a new release on github. If this action succeeds, a new action Release to PyPI will be started, which will deploy the code to PyPI.
