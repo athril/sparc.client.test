@@ -1,4 +1,4 @@
-from importlib.metadata import version
+import importlib.metadata
 from .client import SparcClient
 
 __all__: tuple[str, ...] = [
@@ -7,7 +7,7 @@ __all__: tuple[str, ...] = [
 ]
 
 
-__version__ = version(__package__)
+__version__ = importlib.metadata.version(__package__)
 
 # import pkg_resources
 # __version__ = pkg_resources.get_distribution("sparc.client").version
