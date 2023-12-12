@@ -24,7 +24,6 @@ from scaffoldmaker.annotation.smallintestine_terms import \
 from scaffoldmaker.annotation.stellate_terms import get_stellate_term
 from scaffoldmaker.annotation.stomach_terms import get_stomach_term
 from scaffoldmaker.utils.exportvtk import ExportVtk
-
 from sparc.client.services.pennsieve import PennsieveService
 
 
