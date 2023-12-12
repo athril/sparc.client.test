@@ -1,7 +1,5 @@
 import os
-
 import pytest
-
 from sparc.client.zinchelper import ZincHelper
 
 
