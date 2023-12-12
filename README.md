@@ -102,12 +102,19 @@ The process is currently automated using Github Action in CI.yml.
 
 The process of releasing new version of the software is fully automated.
 
-This means that no version of the software is hard-coded in pyproject.toml, the versioning is fully dynamic.
+This means that `CHANGELOG.md` as well as release commands are automatically generated.  Additionally, there no version of the software is hard-coded in pyproject.toml, the versioning is fully dynamic using git tags.
 
-In order to create a new release, the software version needs to be tagged, with the version number beginning with letter `v`
+The new pipeline is a follows:
+
+1. First, please make sure you are working with the most recent code base, as each release automatically updates CHANGELOG.md.
+`git pull`
+
+2. In order to create a new release, the software version needs to be tagged, with the version number beginning with letter `v`
 `git tag v1.3.7`
 
-Next, the specific version needs to be submitted to the codebase, e.g.
+3. Next, the specific version needs to be submitted to the codebase, e.g.
 `git push origin v1.3.7`
 
-This will create a tagged version 1.3.7, start the Release workflow, which would create a new release on github. If this action succeeds, a new action Release to PyPI will be started, which will deploy the code to PyPI.
+4. This will create a tagged version 1.3.7, start the Release workflow, which would update CHANGELOG.md and create a new release on Github.
+
+5. If this action succeeds, this will trigger a new action Release to PyPI will be started, which will deploy the code to PyPI.
