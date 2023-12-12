@@ -1,5 +1,5 @@
 [project]
-name = "sparc.client.test"
+name = "sparc.client"
 dynamic = ["version"]
 description = "NIH SPARC Python Client"
 readme = "README.md"
