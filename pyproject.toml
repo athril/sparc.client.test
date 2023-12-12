@@ -79,19 +79,23 @@ where = ["src", "config"]
 "*" = ["*.ini", "*.txt"]
 
 [build-system]
-requires = ["setuptools>=64", "setuptools_scm[toml]>=6.2", "pennsieve2", "cmlibs.zinc", "cmlibs.utils", "scaffoldmaker", "mbfxml2ex"]
+#requires = ["setuptools>=64", "setuptools_scm[toml]>=6.2", "pennsieve2", "cmlibs.zinc", "cmlibs.utils", "scaffoldmaker", "mbfxml2ex"]
+requires = ["setuptools>=64", "setuptools-scm>=8.0", "pennsieve2", "cmlibs.zinc", "cmlibs.utils", "scaffoldmaker", "mbfxml2ex"]
 #requires = ["setuptools>=64", "setuptools_scm[toml]>=6.2", "dynamic-versioning", "pennsieve2", "cmlibs.zinc", "cmlibs.utils", "scaffoldmaker", "mbfxml2ex"]
 #requires = ["setuptools>=61", "setuptools_scm[toml]>=6.2", "pennsieve2", "cmlibs.zinc", "cmlibs.utils", "scaffoldmaker", "mbfxml2ex"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools_scm]
+#[tool.setuptools_scm]
 # Empty is fine
 
-[tool.setuptools.dynamic]
-version = {attr = "package.__version__"}
+[tool.setuptools_scm]
+version_file = "src/sparc/client/_version.py"
 
-[project.entry-points."setuptools.finalize_distribution_options"]
-setuptools_scm = "setuptools_scm._integration.setuptools:infer_version"
+#[tool.setuptools.dynamic]
+#version = {attr = "sparc.client.VERSION"}
+
+#[project.entry-points."setuptools.finalize_distribution_options"]
+#setuptools_scm = "setuptools_scm._integration.setuptools:infer_version"
 
 
 [tool.pytest.ini_options]
