@@ -49,6 +49,11 @@ Basic functionalities:
    * listing datasets, files, records
    * downloading files
    * Basic API support (GET/POST) 
+## [v0.0.54] - 2023-12-13
+### :bug: Bug Fixes
+- [`36f50f5`](https://github.com/athril/sparc.client/commit/36f50f5eb30d9d47081a8f3f2d9ffadfa1aedd6e) - cleaning pyproject.toml *(commit by [@athril](https://github.com/athril))*
+
+
 ## [v0.0.53] - 2023-12-13
 ### :sparkles: New Features
 - [`c8df965`](https://github.com/athril/sparc.client/commit/c8df9657232c8bb2bdb7df39632d3a1b1eccad90) - dynamic versioning - works? *(commit by [@athril](https://github.com/athril))*
@@ -86,3 +91,4 @@ Basic functionalities:
 [v0.0.46]: https://github.com/athril/sparc.client/compare/v0.0.45...v0.0.46
 [v0.0.50]: https://github.com/athril/sparc.client/compare/v0.0.49...v0.0.50
 [v0.0.53]: https://github.com/athril/sparc.client/compare/v0.0.52...v0.0.53
+[v0.0.54]: https://github.com/athril/sparc.client/compare/v0.0.53...v0.0.54
